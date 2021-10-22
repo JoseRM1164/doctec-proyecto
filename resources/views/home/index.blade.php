@@ -12,6 +12,8 @@
 
 <body>
     <h1>Doctec</h1>
-
+    <p>
+    {{ $account->name }}
+    </p>
 </body>
 </html>
