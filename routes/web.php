@@ -18,3 +18,5 @@ Route::get('/', 'HomeController@index');
 Route::get('/hello-world', function() {
     return 'hola mundo';
 });
+
+Route::get('/registro', 'AuthController@register')->name('auth.register');

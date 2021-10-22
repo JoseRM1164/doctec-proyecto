@@ -4,7 +4,9 @@
 
 <h1>Doctec</h1>
     <p>
-    {{ $account->name }}
+        <a href="{{ route('auth.register') }}" class="btn btn-primary">
+            Registro aquí
+        </a>
     </p>
 
 @endsection
