@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Laravel\Socialite\Facades\Socialite;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,10 +14,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'HomeController@index');
-
-Route::get('/hello-world', function() {
-    return 'hola mundo';
-});
+Route::get('/', 'HomeController@index')->name('homepage');
 
 Route::get('/registro', 'AuthController@register')->name('auth.register');
+Route::post('/registro', 'AuthController@saveUser')->name('auth.save-user');
+
+Route::get('/logout', 'AuthController@logout')->name('auth.logout');
+
+Route::get('/login', 'AuthController@login')->name('auth.login');
+Route::post('/login', 'AuthController@loginUser')->name('auth.login-user');
+
+
+/*Route::get('/auth/redirect', function () {
+    return Socialite::driver('google')->redirect();
+});
+
+Route::get('/auth/callback', function () {
+    $user = Socialite::driver('google')->user();
+
+    // $user->token
+});*/
+
