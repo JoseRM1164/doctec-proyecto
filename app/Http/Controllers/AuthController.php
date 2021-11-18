@@ -36,7 +36,6 @@ class AuthController extends Controller
             $req->session()->regenerate();
             return redirect()->route('bank.dashboard.index');
         }
-
         return back()->withErrors([
             'email' => 'Las credenciales provistas no son correctas',
         ]);
@@ -88,7 +87,7 @@ class AuthController extends Controller
 
         Auth::login($user);
 
-        return redirect()->route('homepage');
+        return redirect()->route('auth.login');
     }
 
 }

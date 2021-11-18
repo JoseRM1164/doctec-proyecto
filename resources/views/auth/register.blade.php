@@ -40,7 +40,7 @@ align-items-center
                     <div class="input-group mb-4">
                         <input class="form-control" name="password_confirmation" type="password" placeholder="Confirma la contraseña">
                     </div>
-                    <button class="btn btn-block btn-success" type="submit">
+                    <button class="btn btn-block bg-info shadow text-white" type="submit">
                         Registrarse
                     </button>
                 </form>

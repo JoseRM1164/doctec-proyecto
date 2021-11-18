@@ -37,18 +37,18 @@ align-items-center
                         </div>
                         <div class="row">
                             <div class="col-6" >
-                                <button class="btn btn-primary px-4" type="submit" style="background-color: #0ad196; border:#0ad196;">Iniciar sesión</button>
+                                <button class="btn btn-info text-white px-4" type="submit">Iniciar sesión</button>
                             </div>
                         </div>
                     </div>
                 </form>
             </div>
-            <div class="card text-white bg-primary py-5 d-md-down-none" style="width:44%; color:#0ad196">
-                <div class="card-body text-center" style="background-color:#0ad196">
+            <div class="card text-white bg-info py-5 d-md-down-none" style="width:44%;">
+                <div class="card-body text-center">
                     <div>
                         <h2>Registrate</h2>
-                        <p>Si aun no tienes cuenta, registrate como usuario.</p>
-                        <a class="btn btn-lg btn-outline-light mt-3" href="{{ route('auth.register') }}">
+                        <p>Si aun no tienes cuenta, registrate como usuario o doctor.</p>
+                        <a class="btn btn-lg btn-light text-info shadow mt-3" href="{{ route('auth.register') }}">
                             Registrate ahora
                         </a>
                     </div>

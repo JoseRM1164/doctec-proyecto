@@ -8,34 +8,35 @@
 
     <title>Doctec</title>
     <link rel="stylesheet" href="https://unpkg.com/@coreui/coreui/dist/css/coreui.min.css">
-
 </head>
 
 <body>
     <div class="row">
         <div class="col">
             <div class="card">
-                <div class="card-body">
+                <div class="card-body bg-light shadow-lg">
                     <nav class="nav nav-pills flex-column flex-sm-row">
-                        <a class="flex-sm-fill text-sm-center nav-link" href="#">Inicio</a>
-                        <a class="flex-sm-fill text-sm-center nav-link" href="#">Directorio</a>
-                        <a class="flex-sm-fill text-sm-center nav-link" href="#">Inciar sesión</a>
-                        <a class="flex-sm-fill text-sm-center nav-link" href="#">Registrate</a>
+                        <a class="flex-sm-fill text-sm-center nav-link text-info" href="{{ route('homepage') }}">Inicio</a>
+                        <a class="flex-sm-fill text-sm-center nav-link text-info" href="#">Directorio</a>
+                        <a class="flex-sm-fill text-sm-center nav-link text-info" href="{{ route('auth.login') }}">Inciar sesión</a>
+                        <a class="flex-sm-fill text-sm-center nav-link text-info" href="{{ route('auth.register') }}">Registrate</a>
                     </nav>
                 </div>
             </div>
         </div>
     </div>
+
     @yield('content')
+
     <div class="d-flex flex-column">
         <footer class="footer">
             <div>
-            <a href="https://coreui.io">Doctec</a>
+            <a class="text-info" href="{{ route('homepage') }}">Doctec</a>
             <span>&copy; 2021 LabWeb.</span>
             </div>
             <div class="ml-auto">
             <span>Powered by</span>
-            <a href="https://coreui.io">CoreUI</a>
+            <a class="text-info" href="https://coreui.io">CoreUI</a>
             </div>
         </footer>
     </div>

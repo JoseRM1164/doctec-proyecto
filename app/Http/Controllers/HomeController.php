@@ -8,9 +8,11 @@ class HomeController extends Controller
 {
     public function index() {
 
-        \Log::info("Prueba");
-        $account = \App\Models\Account::find(1);
+        //Codigo para entrar directo a dashboard si se tiene una sesión abierta
+        /*if (auth()->user() !== null) {
+            return redirect()->route('bank.dashboard.index');
+        }*/
 
-        return view('home.index', ['account' => $account]);
+        return view('home.index');
     }
 }
