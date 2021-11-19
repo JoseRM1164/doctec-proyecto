@@ -47,7 +47,7 @@ align-items-center
                 <div class="card-body text-center">
                     <div>
                         <h2>Registrate</h2>
-                        <p>Si aun no tienes cuenta, registrate como usuario o doctor.</p>
+                        <p>Si aun no tienes una cuenta con nosotros, registrate y disfruta de los beneficios de Doctec.</p>
                         <a class="btn btn-lg btn-light text-info shadow mt-3 shadow" href="{{ route('auth.register') }}">
                             Registrate ahora
                         </a>

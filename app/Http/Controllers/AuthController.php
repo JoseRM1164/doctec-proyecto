@@ -34,7 +34,7 @@ class AuthController extends Controller
 
         if (Auth::attempt($credentials)) {
             $req->session()->regenerate();
-            return redirect()->route('bank.dashboard.index');
+            return redirect()->route('sesion.doctor');
         }
         return back()->withErrors([
             'email' => 'Las credenciales provistas no son correctas',

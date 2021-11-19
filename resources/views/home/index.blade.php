@@ -14,15 +14,16 @@
             </div>
         </div>
     </div>
-    <div class="card">
+    <div class="card text-white bg-info">
         <div class="card-body">
             <div class="jumbotron">
                 <h1 class="display-3">DOCTEC!</h1>
-                <p class="lead">Somos una aplicación web que busca mejorar la relación entre los doctores y sus pacientes </p>
+                <p class="lead">Somos una empresa que busca mejorar la comunicación y la experienciaentre los doctores y sus pacientes</p>
                 <hr class="my-4">
                 <p>Uno de nuestros objetivos es apoyar a nuestros doctores a poder administrar de una mejor manera su tiempo disponible
-                    para atender citas, las citas que se van agendando y poder notificiarle a sus clientes.</p>
-                <p class="lead"><a class="btn btn-lg bg-info text-white shadow" href="{{ route('auth.register') }}" role="button">Registrate</a></p>
+                    para citas, las citas agendando sus pacientes y poder notificiarle a el o a sus paciente en caso de que cualquiera
+                    de ellos llegué a cancelar la cita y asi liberar ese horario para una nueva cita.</p>
+                <p class="lead"><a class="btn btn-lg bg-light text-info shadow" href="{{ route('auth.register') }}" role="button">Registrate</a></p>
             </div>
         </div>
     </div>
