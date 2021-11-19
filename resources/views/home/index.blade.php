@@ -1,6 +1,8 @@
 @extends('layouts.main')
 
 @section('content')
+<h1 class="d-flex justify-content-center">Bienvenido a Doctec</h1>
+<br>
     <div class="card">
         <div class="card-body">
             <div class="carousel slide" id="carouselExampleSlidesOnly" data-ride="carousel">

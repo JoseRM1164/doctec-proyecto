@@ -10,14 +10,14 @@
     <link rel="stylesheet" href="https://unpkg.com/@coreui/coreui/dist/css/coreui.min.css">
 </head>
 
-<body>
+<body style="background-color:#deebff;">
     <div class="row">
         <div class="col">
             <div class="card">
                 <div class="card-body bg-light shadow">
                     <nav class="nav nav-pills flex-column flex-sm-row">
                         <a class="flex-sm-fill text-sm-center nav-link text-info" href="{{ route('homepage') }}">Inicio</a>
-                        <a class="flex-sm-fill text-sm-center nav-link text-info" href="#">Directorio</a>
+                        <a class="flex-sm-fill text-sm-center nav-link text-info" href="{{ route('directorio') }}">Directorio</a>
                         <a class="flex-sm-fill text-sm-center nav-link text-info" href="{{ route('auth.login') }}">Inciar sesión</a>
                         <a class="flex-sm-fill text-sm-center nav-link text-info" href="{{ route('auth.register') }}">Registrate</a>
                     </nav>

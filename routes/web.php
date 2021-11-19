@@ -15,6 +15,7 @@ use Laravel\Socialite\Facades\Socialite;
 */
 
 Route::get('/', 'HomeController@index')->name('homepage');
+Route::get('/directorio', 'HomeController@directorio')->name('directorio');
 
 Route::get('/registro', 'AuthController@register')->name('auth.register');
 Route::post('/registro', 'AuthController@saveUser')->name('auth.save-user');

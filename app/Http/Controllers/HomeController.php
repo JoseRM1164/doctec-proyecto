@@ -15,4 +15,12 @@ class HomeController extends Controller
 
         return view('home.index');
     }
+
+    public function directorio() {
+
+
+        return view('home.directorio');
+    }
+
+
 }
