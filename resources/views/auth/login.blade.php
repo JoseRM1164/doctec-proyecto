@@ -37,7 +37,7 @@ align-items-center
                         </div>
                         <div class="row">
                             <div class="col-6" >
-                                <button class="btn btn-info text-white px-4" type="submit">Iniciar sesión</button>
+                                <button class="btn btn-info text-white px-4 shadow" type="submit">Iniciar sesión</button>
                             </div>
                         </div>
                     </div>
@@ -48,7 +48,7 @@ align-items-center
                     <div>
                         <h2>Registrate</h2>
                         <p>Si aun no tienes cuenta, registrate como usuario o doctor.</p>
-                        <a class="btn btn-lg btn-light text-info shadow mt-3" href="{{ route('auth.register') }}">
+                        <a class="btn btn-lg btn-light text-info shadow mt-3 shadow" href="{{ route('auth.register') }}">
                             Registrate ahora
                         </a>
                     </div>
@@ -57,4 +57,21 @@ align-items-center
         </div>
     </div>
 </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 @endsection

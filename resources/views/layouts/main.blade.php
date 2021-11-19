@@ -14,7 +14,7 @@
     <div class="row">
         <div class="col">
             <div class="card">
-                <div class="card-body bg-light shadow-lg">
+                <div class="card-body bg-light shadow">
                     <nav class="nav nav-pills flex-column flex-sm-row">
                         <a class="flex-sm-fill text-sm-center nav-link text-info" href="{{ route('homepage') }}">Inicio</a>
                         <a class="flex-sm-fill text-sm-center nav-link text-info" href="#">Directorio</a>
@@ -25,7 +25,8 @@
             </div>
         </div>
     </div>
-
+    <br>
+    <br>
     @yield('content')
 
     <div class="d-flex flex-column">

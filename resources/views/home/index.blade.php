@@ -24,27 +24,4 @@
             </div>
         </div>
     </div>
-
-    <div class="form-group">
-            <div class="help-block form-text with-errors form-control-feedback"></div>
-            <div class="input-group date">
-                <input type="text" class="form-control datetime" id="pickUpTime" name="pickUpTime" placeholder="Pick Up Time" required>
-            </div>
-        </div>
-    <script>
-    $('.datetime').datetimepicker({
-                inline: false,
-                //format:'MM/DD/YYYY HH:mm',
-                icons: {
-                    time: "fa fa-clock-o",
-                    date: "fa fa-calendar",
-                    up: "fa fa-arrow-up",
-                    down: "fa fa-arrow-down",
-                    previous: "fa fa-chevron-left",
-                    next: "fa fa-chevron-right",
-                    today: "fa fa-clock-o",
-                    clear: "fa fa-trash-o"
-                }
-            });
-    </script>
 @endsection

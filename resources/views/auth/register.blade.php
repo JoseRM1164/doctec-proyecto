@@ -40,6 +40,17 @@ align-items-center
                     <div class="input-group mb-4">
                         <input class="form-control" name="password_confirmation" type="password" placeholder="Confirma la contraseña">
                     </div>
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="select1">Tipo de usuario </label>
+                        <div class="col-md-9">
+                            <select class="form-control" name="type">
+                                <option value="0" class="text-">Seleccionar tipo de usuario</option>
+                                <option value="1">Doctor</option>
+                                <option value="2">Paciente</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br>
                     <button class="btn btn-block bg-info shadow text-white" type="submit">
                         Registrarse
                     </button>
@@ -48,5 +59,17 @@ align-items-center
         </div>
     </div>
 </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 @endsection
 
