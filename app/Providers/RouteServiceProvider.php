@@ -43,6 +43,12 @@ class RouteServiceProvider extends ServiceProvider
                 ->namespace($this->namespace)
                 ->group(base_path('routes/api.php'));
 
+            Route::prefix('sesion')
+                ->name('sesion.')
+                ->middleware('web')
+                ->namespace($this->namespace . '\\Sesion')
+                ->group(base_path('routes/sesion.php'));
+
             Route::middleware('web')
                 ->namespace($this->namespace)
                 ->group(base_path('routes/web.php'));

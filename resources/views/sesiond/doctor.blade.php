@@ -1,5 +1,5 @@
 @extends('layouts.dashboardDoctor')
 
 @section('content')
-<h1>Sesión Iniciada</h1>
+<h1>Sesión Doctor Iniciada</h1>
 @endsection

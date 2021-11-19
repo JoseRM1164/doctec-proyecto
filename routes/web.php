@@ -25,8 +25,6 @@ Route::get('/logout', 'AuthController@logout')->name('auth.logout');
 Route::get('/login', 'AuthController@login')->name('auth.login');
 Route::post('/login', 'AuthController@loginUser')->name('auth.login-user');
 
-Route::get('/doctor', 'SessionController@doctor')->name('doctor');
-
 
 /*Route::get('/auth/redirect', function () {
     return Socialite::driver('google')->redirect();
