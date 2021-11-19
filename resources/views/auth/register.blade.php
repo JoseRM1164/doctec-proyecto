@@ -43,10 +43,10 @@ align-items-center
                     <div class="form-group row">
                         <label class="col-md-3 col-form-label" for="select1">Tipo de usuario </label>
                         <div class="col-md-9">
-                            <select class="form-control" name="type">
+                            <select class="form-control" name="tipo">
                                 <option value="0" class="text-">Seleccionar tipo de usuario</option>
-                                <option value="1">Doctor</option>
-                                <option value="2">Paciente</option>
+                                <option value="doctor">Doctor</option>
+                                <option value="paciente">Paciente</option>
                             </select>
                         </div>
                     </div>

@@ -18,7 +18,7 @@
                         <a class="flex-sm-fill text-sm-center nav-link text-info" href="#">Citas</a>
                         <a class="flex-sm-fill text-sm-center nav-link text-info" href="#">Horarios</a>
                         <a class="flex-sm-fill text-sm-center nav-link text-info" href="#">Perfil</a>
-                        <a class="flex-sm-fill text-sm-center nav-link text-info" href="#">Cerrar Sesión</a>
+                        <a class="flex-sm-fill text-sm-center nav-link text-info" href="{{ route('auth.logout') }}">Cerrar Sesión</a>
                     </nav>
                 </div>
             </div>

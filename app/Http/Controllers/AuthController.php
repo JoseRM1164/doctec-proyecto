@@ -34,7 +34,7 @@ class AuthController extends Controller
 
         if (Auth::attempt($credentials)) {
             $req->session()->regenerate();
-            return redirect()->route('sesion.doctor');
+            return redirect()->route('doctor');
         }
         return back()->withErrors([
             'email' => 'Las credenciales provistas no son correctas',
@@ -77,7 +77,7 @@ class AuthController extends Controller
             'name' => 'required',
             'email' => 'required|unique:users,email||email:rfc,dns',
             'password' => 'required|confirmed',
-            'tipo' => 'required|gt:0'
+            'tipo' => 'required|string'
         ]);
 
         $user = User::create([
@@ -89,7 +89,7 @@ class AuthController extends Controller
 
         Auth::login($user);
 
-        return redirect()->route('auth.login');
+        return redirect()->route('doctor');
     }
 
 }
