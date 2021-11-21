@@ -10,7 +10,7 @@ class HomeController extends Controller
 
         //Codigo para entrar directo a dashboard si se tiene una sesión abierta
         if (auth()->user() !== null) {
-            return redirect()->route('doctor');
+            return redirect()->route('sesion.doctor.index');
         }
 
         return view('home.index');
