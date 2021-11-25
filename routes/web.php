@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DoctorController;
 use Illuminate\Support\Facades\Route;
 use Laravel\Socialite\Facades\Socialite;
 
@@ -24,6 +25,8 @@ Route::get('/logout', 'AuthController@logout')->name('auth.logout');
 
 Route::get('/login', 'AuthController@login')->name('auth.login');
 Route::post('/login', 'AuthController@loginUser')->name('auth.login-user');
+
+//Route::resource('doctores', 'DoctorController')->name('tablad');
 
 
 /*Route::get('/auth/redirect', function () {
