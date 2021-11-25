@@ -26,16 +26,7 @@ Route::get('/logout', 'AuthController@logout')->name('auth.logout');
 Route::get('/login', 'AuthController@login')->name('auth.login');
 Route::post('/login', 'AuthController@loginUser')->name('auth.login-user');
 
+
+
 //Route::resource('doctores', 'DoctorController')->name('tablad');
-
-
-/*Route::get('/auth/redirect', function () {
-    return Socialite::driver('google')->redirect();
-});
-
-Route::get('/auth/callback', function () {
-    $user = Socialite::driver('google')->user();
-
-    // $user->token
-});*/
 
