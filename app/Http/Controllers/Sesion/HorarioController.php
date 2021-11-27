@@ -66,7 +66,8 @@ class HorarioController extends Controller
      */
     public function edit($id)
     {
-        //
+        $horario = Horario::find($id);
+        return view('sesiond.editHorario')->with('horario', $horario);
     }
 
     /**
@@ -78,7 +79,15 @@ class HorarioController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $horario = Horario::find($id);
+
+        $horario->dia = $request->get('dia');
+        $horario->inicio = $request->get('inicio');
+        $horario->fin = $request->get('fin');
+
+        $horario->save();
+
+        return redirect('sesion/horarios');
     }
 
     /**
@@ -89,6 +98,8 @@ class HorarioController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $horario = Horario::find($id);
+        $horario->delete();
+        return redirect('sesion/horarios');
     }
 }
