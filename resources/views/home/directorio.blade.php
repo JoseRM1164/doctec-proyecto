@@ -1,86 +1,64 @@
 @extends('layouts.main')
+@section('css')
+    <link href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css" rel="stylesheet">
+@endsection
 
 @section('content')
 
 <h1 class="d-flex justify-content-center">Directorio de doctores</h1>
 <br>
-<div class="row justify-content-center">
-    <div class="col-lg-6">
-        <div class="card">
-            <div class="card-body">
-                <div class="d-inline-flex mb-3">
-                    <div class="input-group-prepend">
-                        <button class="btn btn-info text-white" type="button" id="button-addon1">Buscar</button>
-                    </div>
-                    <input type="text" class="form-control" placeholder="Por nombre o especialidad" aria-label="Example text with button addon" aria-describedby="button-addon1">
-                </div>
+    <table class="table table-striped table-bordered shadow-lg mt-4" style="width:100%">
+        <thead class="bg-info text-secondary">
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellidos</th>
+                <th scope="col">Especialidad</th>
+                <th scope="col">Cita</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($usuarios as $usuario)
+            <tr>
+                <td>Dr. {{$usuario->name}}</td>
+                <td>{{$usuario->apellidos}}</td>
+                <td>{{$usuario->especialidad}}</td>
+                <td><a class="text-info" href="{{ route('auth.login') }}">Agendar cita</a></td>
+            </tr>
+            @endforeach
+        </tbody>
+    </table>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
-                <table class="table table-responsive-sm table-striped">
-                <thead>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Apellidos</th>
-                        <th>Especialidad</th>
-                        <th>Disponibilidad</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Dr. Juan</td>
-                        <td>Alvares López</td>
-                        <td>Medicina general</td>
-                        <td><span class="badge bg-success">Alta</span></td>
-                        <td><a class="text-info" href="{{ route('auth.login') }}">Agendar cita</a></td>
-                    </tr>
-                    <tr>
-                        <td>Dr. Luis</td>
-                        <td>Garcia Galvan</td>
-                        <td>Pediatria</td>
-                        <td><span class="badge bg-danger">Baja</span></td>
-                        <td><a class="text-info" href="{{ route('auth.login') }}">Agendar cita</a></td>
-                    </tr>
-                    <tr>
-                        <td>Dr. Jorge</td>
-                        <td>Montoya Paredes</td>
-                        <td>Cardiología</td>
-                        <td><span class="badge bg-secondary">Sin disponibilidad</span></td>
-                        <td><a class="text-info" href="{{ route('auth.login') }}">Agendar cita</a></td>
-                    </tr>
-                    <tr>
-                        <td>Dr. Rashid</td>
-                        <td>De la Torre Juarez</td>
-                        <td>Oncología</td>
-                        <td><span class="badge bg-warning">Media</span></td>
-                        <td><a class="text-info" href="{{ route('auth.login') }}">Agendar cita</a></td>
-                    </tr>
-                    <tr>
-                        <td>Dra. Maria</td>
-                        <td>Ruiz Torres</td>
-                        <td>Ginecología</td>
-                        <td><span class="badge bg-success">Alta</span></td>
-                        <td><a class="text-info" href="{{ route('auth.login') }}">Agendar cita</a></td>
-                    </tr>
-                </tbody>
-                </table>
-                <ul class="pagination">
-                    <li class="page-item disabled"><a class="page-link text-muted" href="#">Prev</a></li>
-                    <li class="page-item active"><a class="page-link  bg-info border-info" href="#">1</a></li>
-                    <li class="page-item disabled"><a class="page-link text-info" href="#">Next</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+@section('js')
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#usuarios').DataTable();
+        } );
+    </script>
+@endsection
+
 @endsection

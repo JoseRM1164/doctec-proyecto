@@ -75,16 +75,18 @@ class AuthController extends Controller
     {
         $data = $req->validate([
             'name' => 'required',
+            'apellidos' => 'required',
+            'especialidad' => 'required',
             'email' => 'required|unique:users,email||email:rfc,dns',
-            'password' => 'required|confirmed',
-            'tipo' => 'required|string'
+            'password' => 'required|confirmed'
         ]);
 
         $user = User::create([
             'name' => $data['name'],
+            'apellidos' => $data['apellidos'],
+            'especialidad' => $data['especialidad'],
             'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-            'tipo' => $data['tipo']
+            'password' => Hash::make($data['password'])
         ]);
 
         Auth::login($user);

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class HomeController extends Controller
 {
@@ -12,14 +13,13 @@ class HomeController extends Controller
         if (auth()->user() !== null) {
             return redirect()->route('sesion.doctor.index');
         }
-
         return view('home.index');
     }
 
     public function directorio() {
 
-
-        return view('home.directorio');
+        $usuarios = User::all();
+        return view('home.directorio')->with('usuarios', $usuarios);;
     }
 
 
