@@ -44,7 +44,7 @@ class HorarioController extends Controller
 
         $horarios->save();
 
-        return redirect('horarios');
+        return redirect('sesion/horarios');
     }
 
     /**
